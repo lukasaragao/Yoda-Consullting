@@ -1,0 +1,22 @@
+<section class="form-section">
+    <div class="text">
+        <h3>
+            Fique por dentro das tendências
+        </h3>
+        <p>Para manter-se atualizado com as tendências em constante evolução do setor de tecnologia, é fundamental contar com uma empresa de consultoria de software experiente e atualizada. Com acesso privilegiado a informações sobre novas tecnologias, metodologias de desenvolvimento e melhores práticas, essa parceria não apenas permite que os clientes estejam à frente da concorrência, mas também os capacita a adotar estratégias inovadoras para alcançar seus objetivos de negócios de forma eficiente e eficaz.</p>
+    </div>
+    <form [formGroup]="newsletterForm">
+        <label for="name">Nome</label>
+        <input class="text-color-white" id="name" formControlName="name"/>
+        <label for="email">Email</label>
+        <input class="text-color-white" id="email" formControlName="email"/>
+        <btn-primary 
+            btn-text="Inscreva-se" 
+            variant="secondary"
+            (submit)="onSubmit()"
+            [disabled]="!newsletterForm.valid"
+            [loading]="loading()"
+        >
+        </btn-primary>
+    </form>
+</section>
